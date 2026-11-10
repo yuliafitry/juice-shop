@@ -1,0 +1,23 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-DECOMPRESS-20254116:
+    - '*':
+        reason: >-
+          Belum ada versi perbaikan dari pembuat paket. Paket ini ikut terbawa
+          oleh download@8.0.0 dan tidak dipanggil langsung oleh kode aplikasi.
+          Dicek ulang sebelum 31 Maret 2027.
+        expires: 2027-03-31T00:00:00.000Z
+        created: 2026-11-10T14:00:06.120Z
+  SNYK-JS-MARSDB-480405:
+    - '*':
+        reason: >-
+          Belum ada versi perbaikan dari pembuat paket. Dipakai Juice Shop
+          sebagai database untuk review dan pesanan, jadi belum bisa dicopot
+          tanpa mengubah aplikasi. Aplikasi ini memang sengaja rentan untuk
+          latihan dan hanya dijalankan di komputer lokal. Dicek ulang sebelum 31
+          Maret 2027.
+        expires: 2027-03-31T00:00:00.000Z
+        created: 2026-11-10T14:00:14.583Z
+patch: {}
